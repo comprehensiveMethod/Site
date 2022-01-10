@@ -1,10 +1,18 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %} QnA {% endblock %}</title>
+    <title>QnA</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
 </head>
 <body>
-    {% block content %}{% endblock %}
+ <section class="container">
+    <a href="forum.html" class="button">Start</a>
+  </section>
+
 </body>
 </html>
