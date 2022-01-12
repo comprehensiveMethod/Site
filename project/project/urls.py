@@ -16,9 +16,15 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from main import views
+from rest_framework.routers import SimpleRouter
+
+router = SimpleRouter()
+router.register(r'problem', views.PSViewSet)
 
 urlpatterns = [
     path('', views.main_page),
     path('forum/', include('forum.urls')),
     path('admin/', admin.site.urls),
 ]
+
+urlpatterns += router.urls

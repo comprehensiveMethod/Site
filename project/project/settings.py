@@ -77,11 +77,14 @@ WSGI_APPLICATION = 'project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
-# TODO Postrges suda
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'problem_solution_db',
+        'USER': 'vladikus',
+        'PASSWORD': 'pass_for_Site',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
