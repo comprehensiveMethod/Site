@@ -38,8 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'main',
-    'forum'
+    'main'
 ]
 
 MIDDLEWARE = [
@@ -81,10 +80,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'problem_solution_db',
-        'USER': 'vladikus',
-        'PASSWORD': 'pass_for_Site',
+        'USER': 'postgres',
+        'PASSWORD': '1Timka123Timka',
         'HOST': 'localhost',
-        'PORT': '',
+        'PORT': '5432',
     }
 }
 
