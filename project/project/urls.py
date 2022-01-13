@@ -25,6 +25,7 @@ urlpatterns = [
     path('', views.main_page),
     path('forum/', views.all_problems),
     path('admin/', admin.site.urls),
+    path('add/', views.add)
 ]
 
 urlpatterns += router.urls

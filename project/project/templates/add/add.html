@@ -7,22 +7,26 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="{% static 'main/mainPageStyle.css' %}" />
     <div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
-  <h5 class="my-0 mr-md-auto font-weight-normal">Main Page</h5>
+  <h5 class="my-0 mr-md-auto font-weight-normal">Add problem</h5>
   <nav class="my-2 my-md-0 mr-md-3">
     <a class="p-5 text-dark" href="/forum">All problems</a>
-      <a class="p-5 text-dark" href="/add">Add problem</a>
+      <a class="p-5 text-dark" href="/">Main page</a>
 
   </nav>
 
 </div>
 </head>
-
 <body>
-    <div class="inputField">
-    <form>
-        <input type="text" placeholder="Input your problem here">
-        <button class = buttonInput type="submit"></button>
-    </form>
+    <div class="features">
+        <form method="post">
+            {% csrf_token %}
+            Проблема:{{ form.problem }}<br>
+            Дата проблемы:{{ form.dateProblem }}<br>
+            Решение:{{ form.solve }}<br>
+            дата решения: {{ form.dateSolve }}<br>
+            <span>{{ error }}</span>
+            <button class="btn btn-success" type="submit">Добавить</button>
+        </form>
     </div>
 </body>
 </html>
