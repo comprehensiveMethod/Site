@@ -1,12 +1,13 @@
 from .models import ProblemSolve
 from django.forms import ModelForm, TextInput, DateTimeInput, Textarea
 
+
 class ProblemSolveForm(ModelForm):
     class Meta:
         model = ProblemSolve
         fields = ['problem', 'solve', 'dateProblem', 'dateSolve']
-        widjets = {
-            "problem": TextInput(attrs= {
+        widgets = {
+            "problem": TextInput(attrs={
                 'class': 'form_control',
                 'placeholder': 'Проблема'
             }),
