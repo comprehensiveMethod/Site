@@ -23,7 +23,7 @@ router.register(r'problem', views.PSViewSet)
 
 urlpatterns = [
     path('', views.main_page),
-    path('forum/', include('forum.urls')),
+    path('forum/', views.all_problems),
     path('admin/', admin.site.urls),
 ]
 
