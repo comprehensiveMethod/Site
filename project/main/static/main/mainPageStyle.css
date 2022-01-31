@@ -35,21 +35,3 @@ input {
   font-size: 20px;
   font-weight: bold;
 }
-
-.buttonForum {
-  border: none;
-  text-decoration: none;
-  display: inline;
-  padding: 10px 30px;
-  border-radius: 5px;
-  box-shadow: 0 0 40px 40px #F137A6 inset, 0 0 0 0 #F137A6;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  letter-spacing: 2px;
-  color: white;
-  transition: .15s ease-in-out;
-}
-.buttonForum:hover {
-  box-shadow: 0 0 10px 0 #F137A6 inset, 0 0 10px 0px #F137A6;
-  color: #F137A6;
-}

@@ -1,3 +1,10 @@
 from django.contrib import admin
 
-# Register your models here.
+from .models import ProblemSolve
+
+
+class PSAdmin(admin.ModelAdmin):
+    list_display = ("problem", "solve", "dateProblem", "dateSolve")
+
+
+admin.site.register(ProblemSolve, PSAdmin)
