@@ -1,16 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Search Result</title>
-</head>
-<body>
-<ul>
-  {% for ps in object_list %}
-    <li>
-      {{ ps.problem }}  -  {{ ps.dateProblem }},      {{ ps.solve }}  -  {{ ps.dateSolve}}
-    </li>
-  {% endfor %}
-</ul>
-</body>
-</html>
+{% extends 'main/base.html' %}
+
+{% block title %}
+    Problem list
+{% endblock %}
+
+{%block content%}
+    <h3>Existing problems:</h3>
+    {% for problem in object_list %}
+    <div class="card w-75">
+        <div class="card-body">
+            <h5 class="card-title">{{problem.problem}}</h5>
+            <p class="card-text">{{problem.dateSolve}}: {{problem.solve|truncatewords:20}}</p>
+            <a href="#" class="btn btn-light">Read</a>
+        </div>
+    </div>
+    {% endfor %}
+{% endblock %}

@@ -43,10 +43,13 @@ class Search(ListView):
     model = ProblemSolve
     template_name = 'main/searchResult.html'
 
-    def get_queryset(self): # новый
+    def get_queryset(self):
         query = self.request.GET.get('q')
         object_list = ProblemSolve.objects.filter(
             Q(problem__icontains=query) | Q(dateProblem__icontains=query)
         )
         return object_list
+
+
+
 
